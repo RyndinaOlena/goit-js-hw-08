@@ -19,19 +19,20 @@ function sevedValueAll() {
         emailValue: email.value,
     }
     localStorage.setItem(KEY_STORIGE, JSON.stringify(valueInput))
-    console.log(valueInput)
+    // console.log(valueInput)
 };
 
 
 function onFormSubmit(evt) {
     evt.preventDefault()
     evt.target.reset()
-    localStorage.removeItem('feedback-form-state')
+    console.log(localStorage.getItem(KEY_STORIGE))
+    localStorage.removeItem(KEY_STORIGE)
 };
 
 function savedValue() {
     const saveMessege = localStorage.getItem(KEY_STORIGE)
-    console.log(saveMessege)
+
 
 
     if (saveMessege) {
